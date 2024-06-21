@@ -139,6 +139,16 @@
         <plugin>
           <artifactId>maven-surefire-plugin</artifactId>
           <version>2.11</version>
+          <configuration>
+            <argLine>
+              --add-opens java.base/java.lang=ALL-UNNAMED
+              --add-opens java.base/java.io=ALL-UNNAMED
+              --add-opens java.base/java.util=ALL-UNNAMED
+              --add-opens java.base/java.util.concurrent=ALL-UNNAMED
+              --add-opens java.rmi/sun.rmi.transport=ALL-UNNAMED
+              --illegal-access=warn
+            </argLine>
+          </configuration>
         </plugin>
 
         <plugin>
